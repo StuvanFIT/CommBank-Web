@@ -54,10 +54,6 @@ export function GoalManager(props: Props) {
     setName(goal.name)
   }, [goal.name])
 
-  useEffect(() => {
-    setIcon(props.goal.icon)
-  },[props.goal.id, props.goal.icon])
-
   const updateNameOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const nextName = event.target.value
     setName(nextName)
