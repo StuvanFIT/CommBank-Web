@@ -192,15 +192,14 @@ export function GoalManager(props: Props) {
       }
       <Group>
         <Field name='Emoji' icon={faSadCry} />
-        <Value>
-          <AddIconButtonContainer shouldShow={true} onClick={addIconOnClick}>
-            {goal.icon ? (
-              <GoalIcon icon={goal.icon} onClick={addIconOnClick} />
-            ): (
-                <StringValue>Add Emoji!</StringValue>
-            )}
-          </AddIconButtonContainer>
-        </Value>
+        <AddIconButtonContainer shouldShow={true} onClick={addIconOnClick}>
+          {goal.icon ? (
+            <GoalIcon icon={goal.icon} onClick={addIconOnClick} />
+          ): (
+            <FontAwesomeIcon icon={faSmile}/>
+          )}
+
+        </AddIconButtonContainer>
       </Group>
 
 
